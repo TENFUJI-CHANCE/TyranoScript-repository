@@ -6,7 +6,7 @@
 第一版词典还存在查找困难的问题，官方提供的标签手册也存在这样的问题。因此，本版词典将所有部分分成单独的文件。这样帮助读者更清晰地阅读教程。
 本版词典采用markdown编写，并储存在GitHub仓库中，这个仓库是开放的，所有人都可以看。
 
-关于查看方式，请进入**<a href="https://github.com/TENFUJI-CHANCE/TyranoScript-repository">https://github.com/TENFUJI-CHANCE/TyranoScript-repository</a>**，点击你所需要查看的文件。
+关于查看方式，请进入**[https://github.com/TENFUJI-CHANCE/TyranoScript-repository/edit/main/readme.md](https://github.com/TENFUJI-CHANCE/TyranoScript-repository/edit/main/readme.md)**，点击你所需要查看的文件。
 或者通过下面的目录跳转。
 
 希望本词典能够帮助所有喜欢做视觉小说和文字冒险等游戏的制作者们。
