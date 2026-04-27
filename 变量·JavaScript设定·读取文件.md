@@ -1,19 +1,19 @@
 # 变量·JavaScript设定·读取文件
 
 快速跳转：
-- <a href="#loadjs">[loadjs] 导入使用外部JavaScript文件</a>
-- <a href="#eval">[eval] 引入exp指定的JavaScript函数</a>
-- <a href="#clearvar">[clearvar] 消除变量</a>
-- <a href="#clearsysvar">[clearsysvar] 清除全部系统变量</a>
-- <a href="#trace">[trace] 向控制台输入值</a>
-- <a href="#iscript">[iscript] 编写JavaScript脚本</a>
-- <a href="#endscript">[endscript] 结束JavaScript编写</a>
-- <a href="#emb">[emb] 内嵌表达式</a>
-- <a href="#preload">[preload] 预加载数据</a>
-- <a href="#wait_preload">[wait_preload] 等待数据预加载完成</a>
-- <a href="#unload">[unload] 删除预加载数据</a>
-- <a href="#plugin">[plugin] 加载外部插件</a>
-- <a href="#loadcss">[loadcss] 导入使用CSS文件</a>
+- [[loadjs] 导入使用外部JavaScript文件](#loadjs)
+- [[eval] 引入exp指定的JavaScript函数](#eval)
+- [[clearvar] 消除变量](#clearvar)
+- [[clearsysvar] 清除全部系统变量](#clearsysvar)
+- [[trace] 向控制台输入值](#trace)
+- [[iscript] 编写JavaScript脚本](#iscript)
+- [[endscript] 结束JavaScript编写](#endscript)
+- [[emb] 内嵌表达式](#emb)
+- [[preload] 预加载数据](#preload)
+- [[wait_preload] 等待数据预加载完成](#wait_preload)
+- [[unload] 删除预加载数据](#unload)
+- [[plugin] 加载外部插件](#plugin)
+- [[loadcss] 导入使用CSS文件](#loadcss)
 
 ### <a id="loadjs"></a> **[loadjs] 导入使用外部JavaScript文件**
 

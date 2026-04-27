@@ -1,0 +1,134 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TyranoScript词典</title>
+    <!-- 1. 引入 GitHub 风格的 Markdown 样式 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/buttonjax/libs/github-markdown-css/5.2.0/github-markdown.min.css"
+    />
+    <style>
+      header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px;
+        padding: 10px 0;
+        border-bottom: 3px solid #0466d6;
+      }
+      header span {
+        font-size: 20px;
+      }
+      main {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      nav {
+        box-sizing: border-box;
+        width: 30%;
+        margin: 10px auto;
+        padding: 0 15px;
+      }
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      nav button {
+        padding: 5px 0;
+        border: none;
+        background: transparent;
+        font-size: 25px;
+        transition: color 0.8s;
+        font-weight: bold;
+      }
+      nav button:hover {
+        color: #a10f2b;
+      }
+      .markdown-body {
+        box-sizing: border-box;
+        border-left: 1px solid #5cc9df;
+        width: 100vh;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin: 10px auto;
+        padding: 45px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 词典标题 -->
+    <header>
+      <img src="./assets/ts_logo.png" alt="TyranoScript" style="width: 10%;height: 10%; padding-right:15px;" />
+      <h1 style="text-align: center; flex: 1;">TyranoScript词典<span>第二版</span></h1>
+      <img src="./assets/builder_logo.png" alt="TyranoBuilder" style="width: 10%;height: 10%; padding-left:15px;" />
+    </header>
+    <main>
+      <!-- 词典导航，采用纯HTML -->
+      <nav>
+        <ul>
+          <li><button data-md="./文本.md">文本</button></li>
+          <li><button data-md="./文本设定.md">文本设定</button></li>
+          <li><button data-md="./标签·跳跃设定.md">标签·跳跃设定</button></li>
+          <li><button data-md="./角色.md">角色</button></li>
+          <li><button data-md="./画面·背景·图层设定.md">画面·背景·图层设定</button></li>
+          <li><button data-md="./演出·效果·视频.md">演出·效果·视频</button></li>
+          <li><button data-md="./动画.md">动画</button></li>
+          <li><button data-md="./视角.md">视角</button></li>
+          <li><button data-md="./系统设定.md">系统设定</button></li>
+          <li><button data-md="./系统设计设定.md">系统设计设定</button></li>
+          <li><button data-md="./菜单·html设定.md">菜单·html设定</button></li>
+          <li><button data-md="./宏·分歧·子程序.md">宏·分歧·子程序</button></li>
+          <li><button data-md="./变量·JavaScript设定·读取文件.md">变量·JavaScript设定·读取文件</button></li>
+          <li><button data-md="./声音·朗读.md">声音·朗读</button></li>
+          <li><button data-md="./音频.md">音频</button></li>
+          <li><button data-md="./输入文本框.md">输入文本框</button></li>
+          <li><button data-md="./3D.md">3D</button></li>
+          <li><button data-md="./AR.md">AR</button></li>
+        </ul>
+      </nav>
+      <!-- markdown渲染主体容器 -->
+      <div id="content" class="markdown-body"></div>
+    </main>
+
+    <footer>
+      <p style="text-align: center; padding: 20px 0; color: #888">
+        © 2026 designed by TENFUJI-CHANCE/imagiworkami.
+      </p>
+    </footer>
+
+    <!-- 引入 marked 库（Markdown 转换器） -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      const contentDiv = document.getElementById("content");
+      const buttons = document.querySelectorAll("nav button");
+      // 每个按钮绑定点击事件
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const mdFile = btn.getAttribute("data-md");
+          loadMarkdown(mdFile);
+        });
+      });
+      function loadMarkdown(filePath) {
+        contentDiv.innerHTML = "加载中...";
+        // 词典导航markdown内容
+        fetch(filePath)
+          .then(response => {
+            if (!response.ok) throw new Error("文件加载失败");
+            return response.text(); // 获取纯文本内容
+          })
+          .then(markdownText => {
+            // 2. 转换成 HTML 并插入页面
+            contentDiv.innerHTML = marked.parse(markdownText);
+          })
+          .catch(error => {
+            contentDiv.textContent = "加载失败：" + error.message;
+          });
+      }
+      loadMarkdown("./readme.md");
+    </script>
+  </body>
+</html>
