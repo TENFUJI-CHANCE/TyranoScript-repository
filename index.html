@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <title>TyranoScript词典</title>
     <!-- 1. 引入 GitHub 风格的 Markdown 样式 -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/buttonjax/libs/github-markdown-css/5.2.0/github-markdown.min.css"
-    />
+    <link rel="stylesheet" href="./assets/github-markdown-css/github-markdown.css" />
     <style>
       header {
         display: flex;
@@ -27,8 +24,8 @@
       }
       nav {
         box-sizing: border-box;
-        width: 30%;
-        margin: 10px auto;
+        width: 40vh;
+        margin-left: 20px;
         padding: 0 15px;
       }
       nav ul {
@@ -40,8 +37,8 @@
         padding: 5px 0;
         border: none;
         background: transparent;
-        font-size: 25px;
-        transition: color 0.8s;
+        font-size: 20px;
+        transition: color 0.5s;
         font-weight: bold;
       }
       nav button:hover {
@@ -50,7 +47,7 @@
       .markdown-body {
         box-sizing: border-box;
         border-left: 1px solid #5cc9df;
-        width: 100vh;
+        width: 130vh;
         height: 100vh;
         overflow-x: hidden;
         overflow-y: auto;
@@ -62,9 +59,9 @@
   <body>
     <!-- 词典标题 -->
     <header>
-      <img src="./assets/ts_logo.png" alt="TyranoScript" style="width: 10%;height: 10%; padding-right:15px;" />
-      <h1 style="text-align: center; flex: 1;">TyranoScript词典<span>第二版</span></h1>
-      <img src="./assets/builder_logo.png" alt="TyranoBuilder" style="width: 10%;height: 10%; padding-left:15px;" />
+      <img src="./assets/ts_logo.png" alt="TyranoScript" style="padding-right:15px;" />
+      <h1 style="text-align: center; flex: 1; margin:5px auto;">TyranoScript词典<span>第二版</span></h1>
+      <img src="./assets/builder_logo.png" alt="TyranoBuilder" style="padding-left:15px;" />
     </header>
     <main>
       <!-- 词典导航，采用纯HTML -->
@@ -95,13 +92,14 @@
     </main>
 
     <footer>
-      <p style="text-align: center; padding: 20px 0; color: #888">
+      <p style="text-align: center; padding: 20px 0; color: #888;">
         © 2026 designed by TENFUJI-CHANCE/imagiworkami.
       </p>
     </footer>
 
     <!-- 引入 marked 库（Markdown 转换器） -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="./assets/marked/bin/marked.js"></script>
+    <script src="./assets/marked/lib/marked.umd.js"></script>
     <script>
       const contentDiv = document.getElementById("content");
       const buttons = document.querySelectorAll("nav button");
