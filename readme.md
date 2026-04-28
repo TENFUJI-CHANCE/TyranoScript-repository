@@ -8,6 +8,8 @@
 关于查看方式，请进入**[https://github.com/TENFUJI-CHANCE/TyranoScript-repository/edit/main/readme.md](https://github.com/TENFUJI-CHANCE/TyranoScript-repository/edit/main/readme.md)**，点击你所需要查看的文件。
 或者通过下面的目录跳转。
 
+请注意，如果你是通过[网站链接](https://tenfuji-chance.github.io/TyranoScript-repository/)查看的，请不要点击下面的目录，下面的目录是配合上面的方式用的。通过点击网站链接的用户请点击左边的目录跳转。
+
 希望本词典能够帮助所有喜欢做视觉小说和文字冒险等游戏的制作者们。
 
 天藤千禧（imagiworkami）
